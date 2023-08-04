@@ -2,23 +2,23 @@ package calculadora;
 
 public class Operaciones {
     
-    public Integer Suma(Integer num1, Integer num2) {
+    public double Suma(double num1, double num2) {
         return num1 + num2;
     }
     
-    public Integer Resta(Integer num1, Integer num2) {
+    public double Resta(double num1, double num2) {
         return num1 - num2;
     }
     
-    public Integer Multiplicacion(Integer num1, Integer num2) {
+    public double Multiplicacion(double num1, double num2) {
         return num1 * num2;
     }
     
-    public Integer Division(Integer num1, Integer num2) {
+    public double Division(double num1, double num2) {
         return num1 / num2;
     }
     
-    public Integer Porcentaje(Integer num) {
+    public double Porcentaje(double num) {
         return num / 100;
     }
 }
