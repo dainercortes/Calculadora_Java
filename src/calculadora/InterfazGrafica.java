@@ -5,18 +5,21 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import org.w3c.dom.css.RGBColor;
 import FiveCodMover.FiveCodMoverJFrame;
+import javax.swing.JFrame;
 
 public class InterfazGrafica extends javax.swing.JFrame {
   
     Calculadora cl = new Calculadora();
     Operaciones op = new Operaciones();
-    private boolean modoClaro = false;
+    DarkLight dl = new DarkLight();
+    
+    
 
     public InterfazGrafica() {
         initComponents();
         
         this.setLocationRelativeTo(null);
-        this.getContentPane().setBackground(new Color(23, 23, 23));
+        this.getContentPane().setBackground(Color.decode("#171717"));
     }
 
     @SuppressWarnings("unchecked")
@@ -44,9 +47,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
         jbtn_division = new javax.swing.JButton();
         jbtn_punto = new javax.swing.JButton();
         jlbl_acumulado = new javax.swing.JLabel();
-        jbtn_darkLight = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jbtn_cerrar = new javax.swing.JLabel();
+        jlbl_modo = new javax.swing.JLabel();
+        jbtn_minimizar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 51, 51));
@@ -78,7 +81,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         getContentPane().add(jlbl_texto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 290, 70));
 
         jbtn_multi.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jbtn_multi.setForeground(new java.awt.Color(255, 255, 255));
+        jbtn_multi.setForeground(new java.awt.Color(135, 206, 250));
         jbtn_multi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btn_black2.png"))); // NOI18N
         jbtn_multi.setText("X");
         jbtn_multi.setBorderPainted(false);
@@ -95,7 +98,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         getContentPane().add(jbtn_multi, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, 50, 50));
 
         jbtn_eleminar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jbtn_eleminar.setForeground(new java.awt.Color(255, 255, 255));
+        jbtn_eleminar.setForeground(new java.awt.Color(135, 206, 250));
         jbtn_eleminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btn_black2.png"))); // NOI18N
         jbtn_eleminar.setText("C");
         jbtn_eleminar.setBorderPainted(false);
@@ -112,7 +115,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         getContentPane().add(jbtn_eleminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, 50, 50));
 
         jbtn_borrar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jbtn_borrar.setForeground(new java.awt.Color(255, 255, 255));
+        jbtn_borrar.setForeground(new java.awt.Color(135, 206, 250));
         jbtn_borrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btn_black2.png"))); // NOI18N
         jbtn_borrar.setText("AC");
         jbtn_borrar.setBorder(null);
@@ -130,7 +133,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         getContentPane().add(jbtn_borrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 50, 50));
 
         jbtn_resta.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jbtn_resta.setForeground(new java.awt.Color(255, 255, 255));
+        jbtn_resta.setForeground(new java.awt.Color(135, 206, 250));
         jbtn_resta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btn_black2.png"))); // NOI18N
         jbtn_resta.setText("-");
         jbtn_resta.setBorderPainted(false);
@@ -204,7 +207,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         getContentPane().add(jbtn_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 50, 50));
 
         jbtn_suma.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jbtn_suma.setForeground(new java.awt.Color(255, 255, 255));
+        jbtn_suma.setForeground(new java.awt.Color(135, 206, 250));
         jbtn_suma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btn_black2.png"))); // NOI18N
         jbtn_suma.setText("+");
         jbtn_suma.setBorderPainted(false);
@@ -370,7 +373,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         getContentPane().add(jbtn_igual, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 470, 50, 50));
 
         jbtn_porcentaje.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jbtn_porcentaje.setForeground(new java.awt.Color(255, 255, 255));
+        jbtn_porcentaje.setForeground(new java.awt.Color(135, 206, 250));
         jbtn_porcentaje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btn_black2.png"))); // NOI18N
         jbtn_porcentaje.setText("%");
         jbtn_porcentaje.setBorder(null);
@@ -388,7 +391,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         getContentPane().add(jbtn_porcentaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 50, 50));
 
         jbtn_division.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jbtn_division.setForeground(new java.awt.Color(255, 255, 255));
+        jbtn_division.setForeground(new java.awt.Color(135, 206, 250));
         jbtn_division.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btn_black2.png"))); // NOI18N
         jbtn_division.setText("/");
         jbtn_division.setBorder(null);
@@ -430,28 +433,39 @@ public class InterfazGrafica extends javax.swing.JFrame {
         jlbl_acumulado.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         getContentPane().add(jlbl_acumulado, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 290, 30));
 
-        jbtn_darkLight.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/sun.png"))); // NOI18N
-        jbtn_darkLight.setBorderPainted(false);
-        jbtn_darkLight.setContentAreaFilled(false);
-        jbtn_darkLight.setDefaultCapable(false);
-        jbtn_darkLight.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtn_darkLightActionPerformed(evt);
+        jbtn_cerrar.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
+        jbtn_cerrar.setForeground(new java.awt.Color(255, 0, 0));
+        jbtn_cerrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jbtn_cerrar.setText("•");
+        jbtn_cerrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbtn_cerrarMouseClicked(evt);
             }
         });
-        getContentPane().add(jbtn_darkLight, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 30, 30));
+        getContentPane().add(jbtn_cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 20, 20));
 
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("•");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 20, 20));
+        jlbl_modo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jlbl_modo.setForeground(new java.awt.Color(135, 206, 250));
+        jlbl_modo.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jlbl_modo.setText("Modo Claro");
+        jlbl_modo.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jlbl_modo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlbl_modoMouseClicked(evt);
+            }
+        });
+        getContentPane().add(jlbl_modo, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, 100, 20));
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 143, 0));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("•");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 20, 20));
+        jbtn_minimizar.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
+        jbtn_minimizar.setForeground(new java.awt.Color(255, 143, 0));
+        jbtn_minimizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jbtn_minimizar.setText("•");
+        jbtn_minimizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbtn_minimizarMouseClicked(evt);
+            }
+        });
+        getContentPane().add(jbtn_minimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 20, 20));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -533,7 +547,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtn_igualActionPerformed
 
     private void jbtn_divisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_divisionActionPerformed
-        cl.Ejecutar('/', this.jlbl_texto, this.jlbl_acumulado);
+        cl.Ejecutar('÷', this.jlbl_texto, this.jlbl_acumulado);
     }//GEN-LAST:event_jbtn_divisionActionPerformed
 
     private void jbtn_puntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_puntoActionPerformed
@@ -546,47 +560,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
         jlbl_texto.setText(cl.ValidarDecimales(cl.Porcentaje(Double.parseDouble(this.jlbl_texto.getText()))));
     }//GEN-LAST:event_jbtn_porcentajeActionPerformed
 
-    private void jbtn_darkLightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_darkLightActionPerformed
-       
-        if(modoClaro == false) {
-            //Modo claro
-            this.jbtn_darkLight.setIcon(new ImageIcon(getClass().getResource("/img/moon.png")));
-            this.jlbl_texto.setForeground(Color.decode("#87cefa"));
-            this.jlbl_acumulado.setForeground(Color.decode("#87cefa"));
-
-            this.getContentPane().setBackground(Color.white);
-
-            cambiarColorBtn1(jbtn_0);
-            
-            modoClaro = true;
-        } else {
-            
-            InterfazGrafica frame = new InterfazGrafica();
-            this.dispose();
-            frame.setVisible(true);
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    }//GEN-LAST:event_jbtn_darkLightActionPerformed
-
     private void formMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseReleased
         // TODO add your handling code here:
     }//GEN-LAST:event_formMouseReleased
@@ -598,6 +571,38 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private void formMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseDragged
         FiveCodMoverJFrame.MouseDraggedFrame(evt, this);
     }//GEN-LAST:event_formMouseDragged
+
+    private void jlbl_modoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlbl_modoMouseClicked
+          if(dl.isModoClaro() == false) {
+              dl.setModoClaro(true);
+              this.jlbl_modo.setText("Modo Oscuro");
+              this.jlbl_modo.setForeground(Color.decode("#000000"));
+              //---------            
+              dl.cambiarColorFrame(this, "#FFFFFF");
+              //Botones 1
+              dl.cambiarColorBtn(this.Btns1(), "/img/btn_white.png", "/img/btn_white_pressed.png", "#000000");
+              //Botones 2
+              dl.cambiarColorBtn(this.Btns2(), "/img/btn_white_pressed.png", "/img/btn_white2_pressed.png", "#000000");
+        } else {
+              dl.setModoClaro(false);
+              this.jlbl_modo.setText("Modo Claro");
+              this.jlbl_modo.setForeground(Color.decode("#87CEFA"));
+              //---------            
+              dl.cambiarColorFrame(this, "#171717");
+              //Botones 1
+              dl.cambiarColorBtn(this.Btns1(), "/img/btn_black.png", "/img/btn_black_pressed.png", "#FFFFFF");    
+              //Botones2
+              dl.cambiarColorBtn(this.Btns2(), "/img/btn_black2.png", "/img/btn_black2_pressed.png", "#87CEFA");
+          }
+    }//GEN-LAST:event_jlbl_modoMouseClicked
+
+    private void jbtn_minimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbtn_minimizarMouseClicked
+        this.setExtendedState(ICONIFIED);
+    }//GEN-LAST:event_jbtn_minimizarMouseClicked
+
+    private void jbtn_cerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbtn_cerrarMouseClicked
+        this.dispose();
+    }//GEN-LAST:event_jbtn_cerrarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -632,39 +637,34 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 new InterfazGrafica().setVisible(true);
             }
         });
+    } 
+    private JButton[] Btns1() {
+        JButton[] jb = {this.jbtn_0, 
+                        this.jbtn_1,
+                        this.jbtn_2,
+                        this.jbtn_3,
+                        this.jbtn_4,
+                        this.jbtn_5,
+                        this.jbtn_6,
+                        this.jbtn_7,
+                        this.jbtn_8,
+                        this.jbtn_9,
+                        this.jbtn_punto};     
+        return jb;
+    } 
+    private JButton[] Btns2() {
+        JButton[] jb = {this.jbtn_borrar, 
+                        this.jbtn_division,
+                        this.jbtn_eleminar,
+                        this.jbtn_igual,
+                        this.jbtn_multi,
+                        this.jbtn_porcentaje,
+                        this.jbtn_resta,
+                        this.jbtn_suma}; 
+        return jb;
     }
     
-    public void cambiarColorBtn1(JButton btn) {
-        
-        String claro = "/img/btn_white.png";
-        String claroPresionado = "/img/btn_white_pressed.png";
-        String oscuro;
-        String oscuroPresionado;
-        
-        btn.setIcon(new ImageIcon(getClass().getResource(claro)));
-        btn.setPressedIcon(new ImageIcon(getClass().getResource(claro)));
-        btn.setRolloverIcon(new ImageIcon(getClass().getResource(claroPresionado)));
-
-        btn.setForeground(Color.BLACK);
-    }
-    
-    public void cambiarColorBtn2(JButton btn) {
-        
-        String claro = "/img/btn_white_pressed.png";
-        String claroPresionado = "/img/btn_white2_pressed.png";
-        String oscuro;
-        String oscuroPresionado;
-        
-        btn.setIcon(new ImageIcon(getClass().getResource(claro)));
-        btn.setPressedIcon(new ImageIcon(getClass().getResource(claro)));
-        btn.setRolloverIcon(new ImageIcon(getClass().getResource(claroPresionado)));
-
-        btn.setForeground(Color.BLACK);
-    }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JButton jbtn_0;
     private javax.swing.JButton jbtn_1;
     private javax.swing.JButton jbtn_2;
@@ -676,16 +676,18 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JButton jbtn_8;
     private javax.swing.JButton jbtn_9;
     private javax.swing.JButton jbtn_borrar;
-    private javax.swing.JButton jbtn_darkLight;
+    private javax.swing.JLabel jbtn_cerrar;
     private javax.swing.JButton jbtn_division;
     private javax.swing.JButton jbtn_eleminar;
     private javax.swing.JButton jbtn_igual;
+    private javax.swing.JLabel jbtn_minimizar;
     private javax.swing.JButton jbtn_multi;
     private javax.swing.JButton jbtn_porcentaje;
     private javax.swing.JButton jbtn_punto;
     private javax.swing.JButton jbtn_resta;
     private javax.swing.JButton jbtn_suma;
     private javax.swing.JLabel jlbl_acumulado;
+    private javax.swing.JLabel jlbl_modo;
     private javax.swing.JLabel jlbl_texto;
     // End of variables declaration//GEN-END:variables
 }
