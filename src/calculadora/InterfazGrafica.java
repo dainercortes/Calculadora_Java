@@ -7,14 +7,24 @@ import org.w3c.dom.css.RGBColor;
 import FiveCodMover.FiveCodMoverJFrame;
 import javax.swing.JFrame;
 
+/**
+ * Interfaz grafica del programa
+ * 
+ * @version 1.0
+ * @author Dainer Cortes
+ */
 public class InterfazGrafica extends javax.swing.JFrame {
   
+    //Instancia de objetos
     Calculadora cl = new Calculadora();
     Operaciones op = new Operaciones();
     DarkLight dl = new DarkLight();
     
     
-
+    /**
+     * Metodo constructor
+     * Inicializa el color del JFrame en oscuro y lo centra en la pantalla
+     */
     public InterfazGrafica() {
         initComponents();
         
@@ -66,9 +76,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
         addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 formMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                formMouseReleased(evt);
             }
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -474,6 +481,11 @@ public class InterfazGrafica extends javax.swing.JFrame {
         cl.Ejecutar('*', this.jlbl_texto, this.jlbl_acumulado);
     }//GEN-LAST:event_jbtn_multiActionPerformed
 
+    /**
+     * Elimina uno por uno los numeros escritos en la pantalla
+     * 
+     * @param evt 
+     */
     private void jbtn_eleminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_eleminarActionPerformed
         try {
             String texto = jlbl_texto.getText().substring(0, jlbl_texto.getText().length()-1);
@@ -483,6 +495,10 @@ public class InterfazGrafica extends javax.swing.JFrame {
         }   
     }//GEN-LAST:event_jbtn_eleminarActionPerformed
 
+    /**
+     * Limia todo el texto que este en la pantalla
+     * @param evt 
+     */
     private void jbtn_borrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_borrarActionPerformed
         try {
             jlbl_texto.setText("");
@@ -560,23 +576,37 @@ public class InterfazGrafica extends javax.swing.JFrame {
         jlbl_texto.setText(cl.ValidarDecimales(cl.Porcentaje(Double.parseDouble(this.jlbl_texto.getText()))));
     }//GEN-LAST:event_jbtn_porcentajeActionPerformed
 
-    private void formMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_formMouseReleased
-
+    /**
+     * Emplea la libreria FiveCod la cual permite mover el Jframe en la pantalla
+     * 
+     * @param evt 
+     */
     private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
         FiveCodMoverJFrame.MousePressed(evt);
     }//GEN-LAST:event_formMousePressed
 
+    /**
+     * Emplea la libreria FiveCod la cual permite mover el Jframe en la pantalla
+     * 
+     * @param evt 
+     */
     private void formMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseDragged
         FiveCodMoverJFrame.MouseDraggedFrame(evt, this);
     }//GEN-LAST:event_formMouseDragged
 
+    /**
+     * 
+     * Al hacer clic en el texto cambia entre modo claro y oscuro
+     * 
+     * @param evt 
+     */
     private void jlbl_modoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlbl_modoMouseClicked
-          if(dl.isModoClaro() == false) {
+          if(dl.getModoClaro() == false) {
               dl.setModoClaro(true);
               this.jlbl_modo.setText("Modo Oscuro");
               this.jlbl_modo.setForeground(Color.decode("#000000"));
+              this.jlbl_texto.setForeground(Color.decode("#000000"));
+              this.jlbl_acumulado.setForeground(Color.decode("#000000"));
               //---------            
               dl.cambiarColorFrame(this, "#FFFFFF");
               //Botones 1
@@ -587,6 +617,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
               dl.setModoClaro(false);
               this.jlbl_modo.setText("Modo Claro");
               this.jlbl_modo.setForeground(Color.decode("#87CEFA"));
+              this.jlbl_texto.setForeground(Color.decode("#87CEFA"));
+              this.jlbl_acumulado.setForeground(Color.decode("#87CEFA"));
               //---------            
               dl.cambiarColorFrame(this, "#171717");
               //Botones 1
@@ -596,10 +628,20 @@ public class InterfazGrafica extends javax.swing.JFrame {
           }
     }//GEN-LAST:event_jlbl_modoMouseClicked
 
+    /**
+     * Al hacer clic sobre el boton minimiza la ventana JFrame
+     * 
+     * @param evt 
+     */
     private void jbtn_minimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbtn_minimizarMouseClicked
         this.setExtendedState(ICONIFIED);
     }//GEN-LAST:event_jbtn_minimizarMouseClicked
 
+    /**
+     * Al hacer clic sobre el boton cierra la ventana JFrame
+     * 
+     * @param evt 
+     */
     private void jbtn_cerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbtn_cerrarMouseClicked
         this.dispose();
     }//GEN-LAST:event_jbtn_cerrarMouseClicked
@@ -638,6 +680,12 @@ public class InterfazGrafica extends javax.swing.JFrame {
             }
         });
     } 
+    
+    /**
+     * Este metodo aloja en un array todos los botones comunes
+     * 
+     * @return 
+     */
     private JButton[] Btns1() {
         JButton[] jb = {this.jbtn_0, 
                         this.jbtn_1,
@@ -652,6 +700,12 @@ public class InterfazGrafica extends javax.swing.JFrame {
                         this.jbtn_punto};     
         return jb;
     } 
+    
+    /**
+     * Este metodo aloja en un arreglo todos los botones especiales
+     * 
+     * @return 
+     */
     private JButton[] Btns2() {
         JButton[] jb = {this.jbtn_borrar, 
                         this.jbtn_division,
