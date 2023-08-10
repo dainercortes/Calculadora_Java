@@ -66,14 +66,14 @@ public class Calculadora extends Operaciones {
     }
     
     /**
-     * Este metodo se encarga de añadir el numero seleccionado a la pantalla de la calculadora,
+     * Este metodo se encarga de anadir el numero seleccionado a la pantalla de la calculadora,
      * Si ha ejecutado alguna operacion como suma el resultado en pantalla se borra y se empieza
      * a mostrar los nuevos números que este seleccionando
      * 
      * @param jlbl
      * @param numero 
      */
-    public void AñadirNumero(JLabel jlbl, double numero) {       
+    public void AnadirNumero(JLabel jlbl, double numero) {       
         try {
             if(jlbl.getText().startsWith("0") && 
                !jlbl.getText().startsWith("0.") ||          
@@ -84,12 +84,12 @@ public class Calculadora extends Operaciones {
                 limpiar = false;
             }
             
-            // Añade el numero a la pantalla
+            // Anade el numero a la pantalla
             jlbl.setText(jlbl.getText() + this.ValidarDecimales(numero));
             
         } catch (ArithmeticException e) {
-            e.getMessage();
-            limpiar = false;
+            e.getMessage();       
+            limpiar = true;
         }
     }
     

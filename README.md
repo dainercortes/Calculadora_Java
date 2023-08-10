@@ -3,7 +3,7 @@
 El presente proyecto fue realizado con el lenguaje ![](https://img.shields.io/badge/Java-19-orange), es un aplicación de escritorio la cual busca simular las operaciones básicas de una calculadora además de contar con la opción de elegir entre el modo `Claro` u `Oscuro`.
 <br/>
 <br/>
-#### Imágenes del diseño de la calculadora
+#### Imágenes del diseno de la calculadora
 <br/>
 
 ```java

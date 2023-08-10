@@ -514,15 +514,15 @@ public class InterfazGrafica extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtn_restaActionPerformed
 
     private void jbtn_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_9ActionPerformed
-        cl.AñadirNumero(jlbl_texto, 9);
+        cl.AnadirNumero(jlbl_texto, 9);
     }//GEN-LAST:event_jbtn_9ActionPerformed
 
     private void jbtn_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_7ActionPerformed
-        cl.AñadirNumero(jlbl_texto, 7);
+        cl.AnadirNumero(jlbl_texto, 7);
     }//GEN-LAST:event_jbtn_7ActionPerformed
 
     private void jbtn_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_8ActionPerformed
-        cl.AñadirNumero(jlbl_texto, 8);
+        cl.AnadirNumero(jlbl_texto, 8);
     }//GEN-LAST:event_jbtn_8ActionPerformed
 
     private void jbtn_sumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_sumaActionPerformed
@@ -530,31 +530,31 @@ public class InterfazGrafica extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtn_sumaActionPerformed
 
     private void jbtn_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_5ActionPerformed
-        cl.AñadirNumero(jlbl_texto, 5);
+        cl.AnadirNumero(jlbl_texto, 5);
     }//GEN-LAST:event_jbtn_5ActionPerformed
 
     private void jbtn_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_6ActionPerformed
-        cl.AñadirNumero(jlbl_texto, 6);
+        cl.AnadirNumero(jlbl_texto, 6);
     }//GEN-LAST:event_jbtn_6ActionPerformed
 
     private void jbtn_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_4ActionPerformed
-        cl.AñadirNumero(jlbl_texto, 4);
+        cl.AnadirNumero(jlbl_texto, 4);
     }//GEN-LAST:event_jbtn_4ActionPerformed
 
     private void jbtn_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_1ActionPerformed
-        cl.AñadirNumero(jlbl_texto, 1);
+        cl.AnadirNumero(jlbl_texto, 1);
     }//GEN-LAST:event_jbtn_1ActionPerformed
 
     private void jbtn_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_3ActionPerformed
-        cl.AñadirNumero(jlbl_texto, 3);
+        cl.AnadirNumero(jlbl_texto, 3);
     }//GEN-LAST:event_jbtn_3ActionPerformed
 
     private void jbtn_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_2ActionPerformed
-        cl.AñadirNumero(this.jlbl_texto, 2);
+        cl.AnadirNumero(this.jlbl_texto, 2);
     }//GEN-LAST:event_jbtn_2ActionPerformed
 
     private void jbtn_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_0ActionPerformed
-        cl.AñadirNumero(this.jlbl_texto, 0);
+        cl.AnadirNumero(this.jlbl_texto, 0);
     }//GEN-LAST:event_jbtn_0ActionPerformed
 
     private void jbtn_igualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_igualActionPerformed
