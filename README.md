@@ -72,7 +72,7 @@ public void AnadirNumero(JLabel jlbl, double numero) {
             
         } catch (ArithmeticException e) {
             e.getMessage();
-            limpiar = false;
+            limpiar = true;
         }
     }
 ```
