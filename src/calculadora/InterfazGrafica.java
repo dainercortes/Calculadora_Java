@@ -478,7 +478,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtn_multiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_multiActionPerformed
-        cl.Ejecutar('*', this.jlbl_texto, this.jlbl_acumulado);
+        cl.ejecutar('*', this.jlbl_texto, this.jlbl_acumulado);
     }//GEN-LAST:event_jbtn_multiActionPerformed
 
     /**
@@ -503,67 +503,67 @@ public class InterfazGrafica extends javax.swing.JFrame {
         try {
             jlbl_texto.setText("");
             jlbl_acumulado.setText("");
-            cl.Reiniciar();
+            cl.reiniciar();
         } catch (Exception e) {
             e.getMessage();
         }
     }//GEN-LAST:event_jbtn_borrarActionPerformed
 
     private void jbtn_restaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_restaActionPerformed
-        cl.Ejecutar('-', this.jlbl_texto, this.jlbl_acumulado);
+        cl.ejecutar('-', this.jlbl_texto, this.jlbl_acumulado);
     }//GEN-LAST:event_jbtn_restaActionPerformed
 
     private void jbtn_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_9ActionPerformed
-        cl.AnadirNumero(jlbl_texto, 9);
+        cl.anadirNumero(jlbl_texto, 9);
     }//GEN-LAST:event_jbtn_9ActionPerformed
 
     private void jbtn_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_7ActionPerformed
-        cl.AnadirNumero(jlbl_texto, 7);
+        cl.anadirNumero(jlbl_texto, 7);
     }//GEN-LAST:event_jbtn_7ActionPerformed
 
     private void jbtn_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_8ActionPerformed
-        cl.AnadirNumero(jlbl_texto, 8);
+        cl.anadirNumero(jlbl_texto, 8);
     }//GEN-LAST:event_jbtn_8ActionPerformed
 
     private void jbtn_sumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_sumaActionPerformed
-        cl.Ejecutar('+', this.jlbl_texto, this.jlbl_acumulado);
+        cl.ejecutar('+', this.jlbl_texto, this.jlbl_acumulado);
     }//GEN-LAST:event_jbtn_sumaActionPerformed
 
     private void jbtn_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_5ActionPerformed
-        cl.AnadirNumero(jlbl_texto, 5);
+        cl.anadirNumero(jlbl_texto, 5);
     }//GEN-LAST:event_jbtn_5ActionPerformed
 
     private void jbtn_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_6ActionPerformed
-        cl.AnadirNumero(jlbl_texto, 6);
+        cl.anadirNumero(jlbl_texto, 6);
     }//GEN-LAST:event_jbtn_6ActionPerformed
 
     private void jbtn_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_4ActionPerformed
-        cl.AnadirNumero(jlbl_texto, 4);
+        cl.anadirNumero(jlbl_texto, 4);
     }//GEN-LAST:event_jbtn_4ActionPerformed
 
     private void jbtn_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_1ActionPerformed
-        cl.AnadirNumero(jlbl_texto, 1);
+        cl.anadirNumero(jlbl_texto, 1);
     }//GEN-LAST:event_jbtn_1ActionPerformed
 
     private void jbtn_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_3ActionPerformed
-        cl.AnadirNumero(jlbl_texto, 3);
+        cl.anadirNumero(jlbl_texto, 3);
     }//GEN-LAST:event_jbtn_3ActionPerformed
 
     private void jbtn_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_2ActionPerformed
-        cl.AnadirNumero(this.jlbl_texto, 2);
+        cl.anadirNumero(this.jlbl_texto, 2);
     }//GEN-LAST:event_jbtn_2ActionPerformed
 
     private void jbtn_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_0ActionPerformed
-        cl.AnadirNumero(this.jlbl_texto, 0);
+        cl.anadirNumero(this.jlbl_texto, 0);
     }//GEN-LAST:event_jbtn_0ActionPerformed
 
     private void jbtn_igualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_igualActionPerformed
-        cl.Calcular(this.jlbl_texto);
-        cl.MostrarCalculo(jlbl_texto, jlbl_acumulado);
+        cl.calcular(this.jlbl_texto);
+        cl.mostrarCalculo(jlbl_texto, jlbl_acumulado);
     }//GEN-LAST:event_jbtn_igualActionPerformed
 
     private void jbtn_divisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_divisionActionPerformed
-        cl.Ejecutar('÷', this.jlbl_texto, this.jlbl_acumulado);
+        cl.ejecutar('÷', this.jlbl_texto, this.jlbl_acumulado);
     }//GEN-LAST:event_jbtn_divisionActionPerformed
 
     private void jbtn_puntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_puntoActionPerformed
@@ -572,8 +572,13 @@ public class InterfazGrafica extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jbtn_puntoActionPerformed
 
+    /**
+     * Invoca la operación para calcular el porcentaje del número ingresado en pantalla
+     * 
+     * @param evt 
+     */
     private void jbtn_porcentajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_porcentajeActionPerformed
-        jlbl_texto.setText(cl.ValidarDecimales(cl.Porcentaje(Double.parseDouble(this.jlbl_texto.getText()))));
+        jlbl_texto.setText(cl.validarDecimales(cl.porcentaje(Double.parseDouble(this.jlbl_texto.getText()))));
     }//GEN-LAST:event_jbtn_porcentajeActionPerformed
 
     /**

@@ -16,7 +16,7 @@ public class Operaciones {
      * @param num2
      * @return 
      */
-    public double Suma(double num1, double num2) {
+    public double suma(double num1, double num2) {
         return num1 + num2;
     }
     
@@ -27,7 +27,7 @@ public class Operaciones {
      * @param num2
      * @return 
      */
-    public double Resta(double num1, double num2) {
+    public double resta(double num1, double num2) {
         return num1 - num2;
     }
     
@@ -38,7 +38,7 @@ public class Operaciones {
      * @param num2
      * @return 
      */
-    public double Multiplicacion(double num1, double num2) {
+    public double multiplicacion(double num1, double num2) {
         return num1 * num2;
     }
     
@@ -49,7 +49,7 @@ public class Operaciones {
      * @param num2
      * @return 
      */
-    public double Division(double num1, double num2) {
+    public double division(double num1, double num2) {
         if(num1 == 0 || num2 == 0) {
             return 0;
         } else {
@@ -64,7 +64,7 @@ public class Operaciones {
      * @param num
      * @return 
      */
-    public double Porcentaje(double num) {
+    public double porcentaje(double num) {
         return num / 100;
     }
 }

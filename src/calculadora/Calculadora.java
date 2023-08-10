@@ -24,7 +24,7 @@ public class Calculadora extends Operaciones {
      * Este metodo publico se encarga de reiniciar por defecto todos 
      * los valores de los atributos de la clase
      */
-    public void Reiniciar() {
+    public void reiniciar() {
        this.num1 = 0.00;
         this.num2 = 0;
         this.signo = ' ';
@@ -41,7 +41,7 @@ public class Calculadora extends Operaciones {
      * @param numero
      * @return 
      */
-    public String ValidarDecimales(double numero) {
+    public String validarDecimales(double numero) {
         String str = Double.toString(numero);
         // Obtiene todos los numeros despues del punto
         String[] splitted = str.split("\\.");
@@ -73,7 +73,7 @@ public class Calculadora extends Operaciones {
      * @param jlbl
      * @param numero 
      */
-    public void AnadirNumero(JLabel jlbl, double numero) {       
+    public void anadirNumero(JLabel jlbl, double numero) {       
         try {
             if(jlbl.getText().startsWith("0") && 
                !jlbl.getText().startsWith("0.") ||          
@@ -85,7 +85,7 @@ public class Calculadora extends Operaciones {
             }
             
             // Anade el numero a la pantalla
-            jlbl.setText(jlbl.getText() + this.ValidarDecimales(numero));
+            jlbl.setText(jlbl.getText() + this.validarDecimales(numero));
             
         } catch (ArithmeticException e) {
             e.getMessage();       
@@ -98,22 +98,22 @@ public class Calculadora extends Operaciones {
      * 
      * @param jlbl 
      */
-    public void Calcular(JLabel jlbl) {
+    public void calcular(JLabel jlbl) {
         try {
             this.num2 = Double.parseDouble(jlbl.getText());
  
             switch (this.signo) {
                 case '+':
-                    this.acumulado = Suma(this.num1, this.num2);       
+                    this.acumulado = suma(this.num1, this.num2);       
                     break;
                 case '-':
-                    this.acumulado = Resta(this.num1, this.num2);
+                    this.acumulado = resta(this.num1, this.num2);
                     break;
                 case '*':
-                    this.acumulado = Multiplicacion(this.num1, this.num2);
+                    this.acumulado = multiplicacion(this.num1, this.num2);
                     break;
                 case '÷':
-                    this.acumulado = Division(this.num1, this.num2);
+                    this.acumulado = division(this.num1, this.num2);
                     break;
             }    
         } catch (ArithmeticException e) {
@@ -135,20 +135,20 @@ public class Calculadora extends Operaciones {
      * @param jlbl
      * @param jlblAcu 
      */
-    public void Ejecutar(char signo, JLabel jlbl, JLabel jlblAcu) {
+    public void ejecutar(char signo, JLabel jlbl, JLabel jlblAcu) {
         try {
             this.signo = signo; 
         
                 if(jlbl.getText() != "" && this.num1 != 0.00) {
-                    this.Calcular(jlbl);
-                    jlbl.setText(this.ValidarDecimales(this.acumulado));
-                    jlblAcu.setText(this.ValidarDecimales(this.acumulado) + " " + this.signo);
+                    this.calcular(jlbl);
+                    jlbl.setText(this.validarDecimales(this.acumulado));
+                    jlblAcu.setText(this.validarDecimales(this.acumulado) + " " + this.signo);
                     this.num1 = this.acumulado; 
                     limpiar = true;
 
                 } else {
                     this.num1 = Double.parseDouble(jlbl.getText());   
-                    jlblAcu.setText(this.ValidarDecimales(this.num1) + " " + this.signo);
+                    jlblAcu.setText(this.validarDecimales(this.num1) + " " + this.signo);
                     limpiar = true;
                 }       
         } catch (ArithmeticException e) {
@@ -163,11 +163,11 @@ public class Calculadora extends Operaciones {
      * @param jlbl
      * @param jlblAcu 
      */
-    public void MostrarCalculo(JLabel jlbl, JLabel jlblAcu) {
+    public void mostrarCalculo(JLabel jlbl, JLabel jlblAcu) {
         try {
-            jlbl.setText(this.ValidarDecimales(this.acumulado));
-            jlblAcu.setText(this.ValidarDecimales(this.num1) + " " + this.signo + " " + this.ValidarDecimales(this.num2) + " = ");
-            this.Reiniciar();  
+            jlbl.setText(this.validarDecimales(this.acumulado));
+            jlblAcu.setText(this.validarDecimales(this.num1) + " " + this.signo + " " + this.validarDecimales(this.num2) + " = ");
+            this.reiniciar();  
             this.limpiar = true;       
         } catch (ArithmeticException e) {
             e.getMessage();
