@@ -6,21 +6,10 @@
 
 ## Tabla de Contenido
 
-
-
-**Table of Contents**
-
-[TOCM]
-
-[TOC]
-
-
-
-
 - [Demo](#demo)
-- [Características](#caracteristicas)
-- [Instalación](#instalacion)
-- [Proceso de desarrollo](#proceso)
+- [Características](#características)
+- [Instalación](#instalación)
+- [Proceso de desarrollo](#proceso-de-desarrollo)
   - [Construido con](#construido-con)
   - [Estructura](#estructura)
 - [Recursos utilizados](#recursos-utilizados)
