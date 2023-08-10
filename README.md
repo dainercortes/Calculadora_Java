@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://socialify.git.ci/dainercortes/Calculadora_Java/image?font=Inter&issues=1&language=1&name=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Auto" alt="project-image"></p>
 
-<p id="description">Este proyecto se desarrolló utilizando el lenguaje Java y consiste en una aplicación de escritorio diseñada para simular las operaciones fundamentales de una calculadora. Además, ofrece la flexibilidad de alternar entre los modos `Claro`  y ` Oscuro`, proporcionando una experiencia visual adaptada a las preferencias del usuario.</p>
+<p id="description">Este proyecto se desarrolló utilizando el lenguaje Java y consiste en una aplicación de escritorio diseñada para simular las operaciones fundamentales de una calculadora. Además, ofrece la flexibilidad de alternar entre los modos Claro  y Oscuro, proporcionando una experiencia visual adaptada a las preferencias del usuario.</p>
 
 ## Tabla de Contenido
 
