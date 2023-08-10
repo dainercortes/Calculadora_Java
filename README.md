@@ -7,8 +7,8 @@
 ## Tabla de Contenido
 
 - [Demo](#demo)
-- [Características](#características)
-- [Instalación](#instalación)
+- [Características](#caracteristicas)
+- [Instalación](#instalacion)
 - [Proceso de desarrollo](#proceso-de-desarrollo)
   - [Construido con](#construido-con)
   - [Estructura](#estructura)
@@ -21,7 +21,7 @@
 <img height="400px" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExenMxNWg5cXo3YzgyZzRqZGc2Z2o3emlvcXV4aXF0ZDBkanVqZHVhaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5vAAapQSGOeqWKdJjy/giphy.gif"/>
 
 
-## Características
+## Caracteristicas
 
 Estas son algunas de las características del proyecto:
 
@@ -30,7 +30,7 @@ Estas son algunas de las características del proyecto:
 *   La interfaz está diseñada para que sea amigable a la vista del usuario
 
 
-## Instalación:
+## Instalacion:
 
 1. Descargue la ultima versión de [Java JDK](https://www.oracle.com/java/technologies/downloads/)
 2. Descargue el IDE [Apache NetBeans](https://netbeans.apache.org/download/index.html)
