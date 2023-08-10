@@ -1,14 +1,6 @@
 <h1 align="center" id="title">Calculadora.exe</h1>
 
-<<<<<<< HEAD
-El presente proyecto fue realizado con el lenguaje ![](https://img.shields.io/badge/Java-19-orange), es un aplicación de escritorio la cual busca simular las operaciones básicas de una calculadora además de contar con la opción de elegir entre el modo `Claro` u `Oscuro`.
-<br/>
-<br/>
-#### Imágenes del diseno de la calculadora
-<br/>
-=======
 <p align="center"><img src="https://socialify.git.ci/dainercortes/Calculadora_Java/image?font=Inter&issues=1&language=1&name=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Auto" alt="project-image"></p>
->>>>>>> 5e075f5560c94da7124dd78303e4efbf2cbabd35
 
 <p id="description">Este proyecto se desarrolló utilizando el lenguaje Java y consiste en una aplicación de escritorio diseñada para simular las operaciones fundamentales de una calculadora. Además, ofrece la flexibilidad de alternar entre los modos `Claro`  y ` Oscuro`, proporcionando una experiencia visual adaptada a las preferencias del usuario.</p>
 
